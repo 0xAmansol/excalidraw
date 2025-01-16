@@ -14,6 +14,7 @@
     "@workspace/typescript-config": "workspace:*",
     "@workspace/backend-common": "workspace:*",
     "@workspace/common": "workspace:*",
+    "@workspace/db": "workspace:*",
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2"
   },

@@ -1,4 +1,4 @@
-import { secret } from "@workspace/backend-common/config";
+import { JWT_SECRET } from "@workspace/backend-common/config";
 import { Request, Response, NextFunction } from "express";
 import jwt from "jsonwebtoken";
 
@@ -12,7 +12,7 @@ declare global {
 
 export function middleware(req: Request, res: Response, next: NextFunction) {
   const token = req.headers.authorization ?? "";
-  const decoded = jwt.verify(token, secret) as { userId: string };
+  const decoded = jwt.verify(token, JWT_SECRET) as { userId: string };
   if (decoded) {
     req.userId = decoded.userId;
     next();
