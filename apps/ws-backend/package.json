@@ -5,21 +5,24 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc -b",
-    "dev": "tsc -b && node ./dist/index.js",
+    "dev": "esr ./src/index.ts && node ./dist/index.js",
     "start": "npm run build && npm run dev"
   },
   "dependencies": {
     "@types/jsonwebtoken": "^9.0.7",
     "@types/ws": "^8.5.13",
-    "@workspace/typescript-config": "workspace:*",
     "@workspace/backend-common": "workspace:*",
     "@workspace/common": "workspace:*",
     "@workspace/db": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
     "jsonwebtoken": "^9.0.2",
     "ws": "^8.18.0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "esbuild": "^0.24.2"
+  }
 }
